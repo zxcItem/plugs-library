@@ -1,0 +1,38 @@
+{
+    "type": "think-admin-plugin",
+    "name": "xiaochao/plugs-library",
+    "version": "dev-master",
+    "authors": [
+        {
+            "name": "叶落无痕",
+            "email": "zxcaile@foxmail.com"
+        }
+    ],
+    "require": {
+        "php": ">7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "plugin\\library\\": "src"
+        }
+    },
+    "extra": {
+        "config": {
+            "type": "service",
+            "name": "组件方法管理",
+            "cover": "iconfont iconfont-comment",
+            "description": "组件模块，包含：数组转换,坐标转换"
+        },
+        "think": {
+            "services": [
+                "plugin\\library\\Service"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "zoujingli/think-install": true
+        }
+    }
+}
