@@ -9,7 +9,7 @@ use think\admin\Plugin;
 /**
  * 插件注册服务
  * @class Service
- * @package plugin\worker
+ * @package plugin\library
  */
 class Service extends Plugin
 {
