@@ -3,7 +3,11 @@
 
 namespace plugin\library\extend;
 
-
+/**
+ * 坐标转换
+ * Class CoordinateExtend
+ * @package plugin\library\extend
+ */
 class CoordinateExtend
 {
     const X_PI = 3.14159265358979324 * 3000.0 / 180.0;

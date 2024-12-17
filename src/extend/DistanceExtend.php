@@ -4,6 +4,11 @@
 namespace plugin\library\extend;
 
 
+/**
+ * 经纬度坐标计算
+ * Class DistanceExtend
+ * @package plugin\library\extend
+ */
 class DistanceExtend
 {
     /**
