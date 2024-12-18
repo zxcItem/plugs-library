@@ -20,7 +20,7 @@
         "config": {
             "type": "service",
             "name": "组件方法管理",
-            "cover": "iconfont iconfont-comment",
+            "cover": "layui-icon layui-icon-set",
             "description": "组件模块，包含：数组转换,坐标转换"
         },
         "think": {
