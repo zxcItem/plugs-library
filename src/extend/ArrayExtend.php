@@ -36,10 +36,40 @@ class ArrayExtend
      * @param string $sym2
      * @return string
      */
-    public static function ArrayToString(array $array,$sym1 = ',',$sym2 = ';' ): string
+    public static function ArrayToString(array $array,string $sym1 = ',',string $sym2 = ';' ): string
     {
         return implode($sym2, array_map(function ($item) use( $sym1 ) {
             return implode($sym1, $item);
         }, $array));
+    }
+
+    /**
+     * 多维数组转换字符串
+     * @param array $array
+     * @param string $key
+     * @param string $value
+     * @param string $sym1
+     * @param string $sym2
+     * @return string
+     */
+    public static function ArrayConvert(array $array,string $key,string $value,string $sym1 = ',',string $sym2 = ';' )
+    {
+        return implode($sym2, array_map(function ($item) use ($key,$value,$sym1) {
+            return implode($sym1, array_column($item[$key], $value));
+        }, $array));
+    }
+
+    /**
+     * 数组排序
+     * @param array $array
+     * @param string $field
+     * @return array
+     */
+    public static function ArraySort(array $array,string $field)
+    {
+        usort($array, function($a, $b) use ($field) {
+            return $b[$field] <=> $a[$field];
+        });
+        return $array;
     }
 }
